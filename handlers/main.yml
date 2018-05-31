@@ -1,6 +1,9 @@
-- name: Reread Supervisor configuration
+- name: reread Supervisor configuration
   shell: supervisorctl reread
   become: yes
+
+- name: followed by telling it to enact any changes
+  shell: supervisorctl update
 
 - name: restart supervisor
   service: name=supervisord state=restarted
