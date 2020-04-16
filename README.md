@@ -51,9 +51,25 @@ The path where Supervisor configuration should be stored.
 
 Set to `true` if you need to run Supervisor in the foreground.
 
+    supervisor_logfile: /var/log/supervisor/activity.log
+
+The path to the activity log file where Supervisor activity logs will be stored.
+
+    supervisor_logfile_maxbytes: 20000000
+
+When the activity log reaches supervisor_logfile_maxbytes bytes, the current log file is moved to a backup file and a new activity log file is created. 
+
+    supervisor_logfile_backups: 3
+
+Specifies how many logfile backups to store.
+
+    supervisor_loglevel: info
+
+Activity log level as [described in the manual](http://supervisord.org/logging.html#activity-log-levels)
+
     supervisor_log_dir: /var/log/supervisor
 
-The location where Supervisor logs will be stored.
+The location where Supervisor child process logs will be stored.
 
     supervisor_user: root
     supervisor_password: 'my_secret_password'

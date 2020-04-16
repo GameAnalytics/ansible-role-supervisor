@@ -28,6 +28,11 @@ supervisor_programs: []
 
 supervisor_nodaemon: false
 
+supervisor_logfile: /var/log/supervisor/activity.log
+supervisor_logfile_maxbytes: 20000000
+supervisor_logfile_backups: 3
+supervisor_loglevel: info
+
 supervisor_log_dir: /var/log/supervisor
 
 supervisor_user: root
